@@ -15,3 +15,6 @@ else
 fi
 echo "$TIMESTAMP - $STATUS - ${CPU_UTIL}%" >> "$LOG_FILE"
 exit $EXIT_CODE
+echo ""
+echo "Top 5 CPU-consuming processes:"
+ps -eo pid,comm,%cpu --sort=-%cpu | head -n 6
