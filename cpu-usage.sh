@@ -1,9 +1,4 @@
 #!/bin/bash
-<<<<<<< HEAD
-echo "Everything is fine, no need to check!"
-exit 0
-=======
-
 CPU_UTIL=$(top -bn1 | grep "Cpu(s)" | awk '{print 100 - $8}' | awk '{printf "%.0f\n", $1}')
 TIMESTAMP=$(date ' +%Y-%m-%d_$H:%M:%S')
 LOG_FILE="/var/log/cpu-monitor.log"
@@ -23,4 +18,3 @@ echo "Healthcheck run at: $(date)"
 echo ""
 echo "Top 5 CPU-consuming processes:"
 ps -eo pid,comm,%cpu --sort=-%cpu | head -n 6
->>>>>>> parent of cd7f5fd (updated script)
