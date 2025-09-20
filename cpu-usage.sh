@@ -15,3 +15,4 @@ else
 fi
 echo "$TIMESTAMP - $STATUS - ${CPU_UTIL}%" >> "$LOG_FILE"
 exit $EXIT_CODE
+echo "Healthcheck run at: $(date)"
